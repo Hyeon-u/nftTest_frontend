@@ -1,0 +1,23 @@
+
+.zoom {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    transition: transform 0.8s; /* Animation */
+}
+
+.img-outer {
+    overflow: hidden;
+    max-width: 250px;
+    max-height: 250px;
+
+}
+
+/* .img-inner {
+    position: relative;
+
+} */
+
+.zoom:hover {
+    transform: scale(1.1);
+}
