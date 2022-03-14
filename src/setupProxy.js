@@ -1,20 +1,13 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
+const apiUrl = 'http://localhost:5001'
+
 module.exports = function (app) {
     app.use(
         '/api',
         createProxyMiddleware({
-            target: 'http://localhost:5000',
+            target: apiUrl,
             changeOrigin: true,
         })
     );
 };
-// module.exports = function (app) {
-//     app.use(
-//         '/api',
-//         createProxyMiddleware({
-//             target: 'https://api.bisket.cc',
-//             changeOrigin: true,
-//         })
-//     );
-// };
